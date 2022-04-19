@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Poppins', 'Courier New',
+    monospace;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#brand-logo{
+  width: 10rem;
+}
+
+#shop-title{
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+#nav-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* justify-content: space-around; */
+  cursor: pointer;
+  padding-right: 2rem;
+}
