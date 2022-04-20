@@ -17,6 +17,13 @@ import BlueSpike from "../images/spiky-ball/blue.png"
 import GreenSpike from "../images/spiky-ball/green.png"
 import OrangeSpike from "../images/spiky-ball/orange.png"
 
+import OrangeTeddy from "../images/teddy/orange.png"
+import BrownTeddy from "../images/teddy/brown.png"
+
+import BlueBowl from "../images/feeding-bowl/blue.png"
+import PinkBowl from "../images/feeding-bowl/pink.png"
+import GreenBowl from "../images/feeding-bowl/green.png"
+
 
 const products = [
     {
@@ -67,5 +74,28 @@ const products = [
             green: GreenSpike
         }
        },
+       {
+        category: "Toy",
+        id: "teddy",
+        name: "Teddy",
+        price: 14.99,
+        previewImage: BrownTeddy,
+        gallery: {
+            orange: OrangeTeddy,
+        }
+       },
+       {
+        category: "Food",
+        id: "bowl",
+        name: "Feeding Bowl",
+        price: 25.99,
+        previewImage: BlueBowl,
+        gallery: {
+            green: GreenBowl,
+            pink: PinkBowl
+        }
+       },
+    
+];
 
-]
+export default products;

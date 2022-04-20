@@ -64,3 +64,36 @@ nav{
 .shop-now{
   width: 15rem;
 }
+
+.products-grid{
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+
+.product{
+  width: 15rem;
+  max-width: 20rem;
+  cursor: pointer;
+}
+
+.product img{
+  border: 1px solid black;
+  width: inherit;
+}
+
+.product-text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.product-text h3{
+  font-size: 1.1rem;
+}
+
+.product-text h4{
+  font-size: 1rem;
+  font-weight: 700;
+}
