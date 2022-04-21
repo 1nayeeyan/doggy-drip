@@ -1,20 +1,16 @@
 import React from "react";
 import products from "../data/products";
-import { useNavigate, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import Product from "./Product";
+import { useNavigate} from "react-router-dom";
 
 export default function Shop(){
     let navigate = useNavigate();
-    let {productid} = useParams();
+
+    function viewProduct(product) {
+        navigate(`/product/${product.id}`)
+    }
+
     const product = products.map(product =>
-        <div className="product col-sm mb-5" onClick={() =>
-        navigate(`/product/${product.id}`) &&  
-        <Product
-            key = {product.id}
-            value = {product.name}
-        />
-        }>
+        <div className="product col-sm mb-5" onClick={() => viewProduct(product)}>
             <img src={product.previewImage} />
             <div className="product-text">
                 <h3>{product.name}</h3>
@@ -25,7 +21,8 @@ export default function Shop(){
 
     return(
         <div className="products-grid container">
-            <h2 className="category-header mt-5 mb-5">All Products</h2>
+            <h2 className="category-header mt-5 mb-2">All Products</h2>
+            <h3 className="category-header mt-2 mb-5">{products.length} Items</h3>
             <div className="container-md row">
             {product}
             </div>

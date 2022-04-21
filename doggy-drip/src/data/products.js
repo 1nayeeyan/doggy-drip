@@ -28,7 +28,7 @@ import GreenBowl from "../images/feeding-bowl/green.png"
 const products = [
     {
      category: "Toy",
-     id: "bells",
+     id: "bell",
      name: "Bells",
      price: 19.98,
      previewImage: RedBlackBell,
