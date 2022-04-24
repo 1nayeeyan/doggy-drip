@@ -97,3 +97,37 @@ nav{
   font-size: 1rem;
   font-weight: 700;
 }
+
+#product-page-preview{
+  width: 30rem;
+  border: 1px solid black;
+}
+
+.product-page-text{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 20rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-page-header{
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-page-body{
+  width: inherit;
+}
+
+.gallery-images{
+  width: 5rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+}

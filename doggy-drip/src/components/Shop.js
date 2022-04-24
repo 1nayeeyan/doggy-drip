@@ -1,6 +1,7 @@
 import React from "react";
 import products from "../data/products";
 import { useNavigate} from "react-router-dom";
+import Product from "./Product";
 
 export default function Shop(){
     let navigate = useNavigate();
