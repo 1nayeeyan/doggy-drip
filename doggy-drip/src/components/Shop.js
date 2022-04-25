@@ -11,7 +11,7 @@ export default function Shop(){
     }
 
     const product = products.map(product =>
-        <div className="product col-sm mb-5" onClick={() => viewProduct(product)}>
+        <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product)}>
             <img src={product.previewImage} />
             <div className="product-text">
                 <h3>{product.name}</h3>

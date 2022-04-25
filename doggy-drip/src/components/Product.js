@@ -25,7 +25,7 @@ export default function Product() {
 
     function galleryMaker(){
         const images = gallery.map(
-            images => <img onClick={() => changeStyle(images)} className="gallery-images"src = {images} />
+            images => <img onClick={() => changeStyle(images)} key={images}className="gallery-images"src = {images} />
         )
         return images
     }
@@ -52,6 +52,10 @@ export default function Product() {
                     <p>{product.category}</p>
                     <h5>Color: {chosenColor || product.previewImageColor}</h5>
                     {galleryMaker()}
+                    <button type="button" className="btn btn-success add-to-cart mt-5" onClick={() => {
+                        }
+                        }>Add to cart
+                    </button>
                 </div>
             </div>
         </div>
