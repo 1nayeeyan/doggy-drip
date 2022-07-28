@@ -1,14 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import products from "../data/products";
 import { useNavigate} from "react-router-dom";
 import Product from "./Product";
 
 export default function Shop(){
     let navigate = useNavigate();
+    const [cart, setCart] = useState('')
 
     function viewProduct(product) {
         navigate(`/product/${product.id}`)
+        <Product "setCart" />;
     }
+
+
 
     const product = products.map(product =>
         <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product)}>
