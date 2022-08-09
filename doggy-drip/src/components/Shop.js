@@ -10,7 +10,7 @@ export default function Shop(){
 
     function viewProduct(product) {
         navigate(`/product/${product.id}`)
-        <Product "setCart" />;
+        // <Product "setCart" />;
     }
 
 
