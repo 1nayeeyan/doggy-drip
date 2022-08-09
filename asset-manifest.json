@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/doggy-drip/static/css/main.6bd5df20.css",
+    "main.js": "/doggy-drip/static/js/main.92711f96.js",
+    "static/media/Purple.png": "/doggy-drip/static/media/Purple.fbb010cd7124576f472b.png",
+    "static/media/Orange.png": "/doggy-drip/static/media/Orange.8ccba181e3d12f0fef9f.png",
+    "static/media/Green.png": "/doggy-drip/static/media/Green.bedeecb2142681e40a19.png",
+    "static/media/Red.png": "/doggy-drip/static/media/Red.e1c8788a9c3db1dbcdce.png",
+    "static/media/Blue.png": "/doggy-drip/static/media/Blue.afbb70e72fef03ff5ee2.png",
+    "static/media/Brown.png": "/doggy-drip/static/media/Brown.b2e1f0a147ee5f7dacd7.png",
+    "static/media/Blue-Black.png": "/doggy-drip/static/media/Blue-Black.92eb6af97ada5c4cdfb2.png",
+    "static/media/Blue-Yellow.png": "/doggy-drip/static/media/Blue-Yellow.a7b2987740b2e853cdf3.png",
+    "static/media/Red-Black.png": "/doggy-drip/static/media/Red-Black.897cdbbf012cc06574ae.png",
+    "static/media/Yellow-Black.png": "/doggy-drip/static/media/Yellow-Black.f752b39d017953fce0c5.png",
+    "static/media/Red-White.png": "/doggy-drip/static/media/Red-White.8a9d8dbdf8b09138959e.png",
+    "static/media/Pink.png": "/doggy-drip/static/media/Pink.78c10ac3ad353e0beebd.png",
+    "static/media/brand.png": "/doggy-drip/static/media/brand.be73468724f93b20c85e.png",
+    "static/media/dog-walking.svg": "/doggy-drip/static/media/dog-walking.a2e719be68d37bcb619a72ed10f8ecff.svg",
+    "index.html": "/doggy-drip/index.html",
+    "main.6bd5df20.css.map": "/doggy-drip/static/css/main.6bd5df20.css.map",
+    "main.92711f96.js.map": "/doggy-drip/static/js/main.92711f96.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bd5df20.css",
+    "static/js/main.92711f96.js"
+  ]
+}
