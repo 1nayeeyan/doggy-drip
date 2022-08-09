@@ -20,7 +20,7 @@ export default function Product() {
 
     function changeStyle(images) {
         setChosenPhoto(images)
-        setChosenColor(images.slice(14, images.indexOf('.')))
+        setChosenColor(images.slice(25, images.indexOf('.')))
     }
 
     function galleryMaker(){
@@ -46,7 +46,7 @@ export default function Product() {
             <div className="product-page-text">
                 <div className="product-page-header">
                     <h3 className="product-page-name text-body">{product.name}</h3>
-                    <h4 className="product-page-price text-body">{product.price}</h4>
+                    <h4 className="product-page-price text-body">${product.price}</h4>
                 </div>
                 <div className="product-page-body mt-4">
                     <p>{product.category}</p>
