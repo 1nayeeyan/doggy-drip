@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/doggy-drip/static/css/main.6bd5df20.css",
-    "main.js": "/doggy-drip/static/js/main.92711f96.js",
+    "main.js": "/doggy-drip/static/js/main.34a2f534.js",
     "static/media/Purple.png": "/doggy-drip/static/media/Purple.fbb010cd7124576f472b.png",
     "static/media/Orange.png": "/doggy-drip/static/media/Orange.8ccba181e3d12f0fef9f.png",
     "static/media/Green.png": "/doggy-drip/static/media/Green.bedeecb2142681e40a19.png",
@@ -18,10 +18,10 @@
     "static/media/dog-walking.svg": "/doggy-drip/static/media/dog-walking.a2e719be68d37bcb619a72ed10f8ecff.svg",
     "index.html": "/doggy-drip/index.html",
     "main.6bd5df20.css.map": "/doggy-drip/static/css/main.6bd5df20.css.map",
-    "main.92711f96.js.map": "/doggy-drip/static/js/main.92711f96.js.map"
+    "main.34a2f534.js.map": "/doggy-drip/static/js/main.34a2f534.js.map"
   },
   "entrypoints": [
     "static/css/main.6bd5df20.css",
-    "static/js/main.92711f96.js"
+    "static/js/main.34a2f534.js"
   ]
 }
