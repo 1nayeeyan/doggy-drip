@@ -1,29 +1,29 @@
 import React from "react";
-import { useState } from "react";
-import products from "../data/products";
 import { useNavigate} from "react-router-dom";
-import Product from "./Product";
+import { CartState } from "../context/Context";
 
 export default function Shop(){
     let navigate = useNavigate();
-    const [cart, setCart] = useState('')
 
     function viewProduct(product) {
         navigate(`/product/${product.id}`)
-        // <Product "setCart" />;
     }
 
+    const {
+        state: {products},
+    } = CartState();
 
-
-    const product = products.map(product =>
+    const product = products.map((product) =>
         <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product)}>
-            <img src={product.previewImage} />
+            <img src={product.image} alt={product.name} />
             <div className="product-text">
                 <h3>{product.name}</h3>
                 <h4>${product.price}</h4>
             </div>
         </div>
         )
+
+
 
     return(
         <div className="products-grid container">
