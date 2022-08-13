@@ -8,10 +8,13 @@ const Cart = createContext();
 const Context = ( {children} ) => {
 
     const product = products.map((p) => ({
+        category: p.category,
         id: p.id,
         name: p.name,
         price: p.price,
-        image: p.previewImage,
+        previewImage: p.previewImage,
+        previewImageColor: p.previewImageColor,
+        gallery: p.gallery,
     }));
         
     // console.log(products);

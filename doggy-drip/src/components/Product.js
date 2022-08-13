@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
-import products from "../data/products";
+// import products from "../data/products";
 
 export default function Product() {
     const [chosenPhoto, setChosenPhoto] = React.useState(false)
@@ -11,17 +11,17 @@ export default function Product() {
 
     console.log(prod);
 
-    let productid = useParams()
+    // let productid = useParams()
     // console.log(productid.productid)
 
-    const objectArray = Object.values(products);
-    // console.log(objectArray)
+    // const objectArray = Object.values(products);
+    // // console.log(objectArray)
 
-    const product = objectArray.find(element => element.id === productid.productid);
-    // console.log(product)
+    // const product = objectArray.find(element => element.id === productid.productid);
+    // // console.log(product)
 
-    const gallery = Object.values(product.gallery)
-    // console.log(gallery)
+    const gallery = Object.values(prod.gallery);
+    console.log(gallery)
 
     function changeStyle(images) {
         setChosenPhoto(images)
@@ -46,16 +46,16 @@ export default function Product() {
 
     return (
         <div className="product-page container mt-5">
-            <p className="path-text text-muted">Shop / {product.name}</p>
-            <img id="product-page-preview" src={chosenPhoto || product.previewImage} alt={product.name}></img>
+            <p className="path-text text-muted">Shop / {prod.name}</p>
+            <img id="product-page-preview" src={chosenPhoto || prod.previewImage} alt={prod.name}></img>
             <div className="product-page-text">
                 <div className="product-page-header">
-                    <h3 className="product-page-name text-body">{product.name}</h3>
-                    <h4 className="product-page-price text-body">${product.price}</h4>
+                    <h3 className="product-page-name text-body">{prod.name}</h3>
+                    <h4 className="product-page-price text-body">${prod.price}</h4>
                 </div>
                 <div className="product-page-body mt-4">
-                    <p>{product.category}</p>
-                    <h5>Color: {chosenColor || product.previewImageColor}</h5>
+                    <p>{prod.category}</p>
+                    <h5>Color: {chosenColor || prod.previewImageColor}</h5>
                     {galleryMaker()}
                     <button type="button" className="btn btn-success add-to-cart mt-5" onClick={() => {
                         }

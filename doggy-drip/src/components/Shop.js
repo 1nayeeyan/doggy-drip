@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate} from "react-router-dom";
 import { CartState } from "../context/Context";
-import Product from "./Product";
 
 export default function Shop(){
     let navigate = useNavigate();
@@ -22,7 +21,7 @@ export default function Shop(){
 
     const product = products.map((product) =>
         <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product) }>
-            <img src={product.image} alt={product.name} />
+            <img src={product.previewImage} alt={product.name} />
             <div className="product-text">
                 <h3>{product.name}</h3>
                 <h4>${product.price}</h4>
