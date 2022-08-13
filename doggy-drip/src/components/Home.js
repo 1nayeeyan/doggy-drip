@@ -1,4 +1,5 @@
 import React from "react";
+import Shop from "./Shop";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DogWalking from "../images/brand/dog-walking.svg"
@@ -14,7 +15,7 @@ export default function Home() {
               Dogs leave paw prints on our hearts, so treat them right while they're here.
             </h2>
             <button type="button" className="btn btn-warning shop-now" onClick={() => {
-                navigate("/shop")
+              navigate("/shop")
              }
             }>Shop Now
             </button>

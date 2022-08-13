@@ -1,12 +1,19 @@
 import React from "react";
 import { useNavigate} from "react-router-dom";
 import { CartState } from "../context/Context";
+import Product from "./Product";
 
 export default function Shop(){
     let navigate = useNavigate();
 
     function viewProduct(product) {
-        navigate(`/product/${product.id}`)
+        navigate(`/product/${product.id}`, {
+            state: {
+                prod: product,
+                key: product.id,
+            }
+        });
+        // return <Product prod={product} key ={product.id} />
     }
 
     const {
@@ -14,7 +21,7 @@ export default function Shop(){
     } = CartState();
 
     const product = products.map((product) =>
-        <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product)}>
+        <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product) }>
             <img src={product.image} alt={product.name} />
             <div className="product-text">
                 <h3>{product.name}</h3>
@@ -22,8 +29,6 @@ export default function Shop(){
             </div>
         </div>
         )
-
-
 
     return(
         <div className="products-grid container">
@@ -36,3 +41,12 @@ export default function Shop(){
     )
 }
 
+// const Shop = () => {
+//     return (
+//         <div>
+//             <h1>"poop" </h1>
+//         </div>
+//     )
+// }
+
+// export default Shop

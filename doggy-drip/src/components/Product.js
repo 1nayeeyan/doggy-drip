@@ -1,11 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import products from "../data/products";
 
 export default function Product() {
     const [chosenPhoto, setChosenPhoto] = React.useState(false)
     const [chosenColor, setChosenColor] = React.useState(false)
     
+    const {state} = useLocation();
+    const {prod, key} = state;
+
+    console.log(prod);
+
     let productid = useParams()
     // console.log(productid.productid)
 
@@ -25,7 +30,7 @@ export default function Product() {
 
     function galleryMaker(){
         const images = gallery.map(
-            images => <img onClick={() => changeStyle(images)} key={images}className="gallery-images"src = {images} />
+            images => <img onClick={() => changeStyle(images)} key={images} className="gallery-images"src = {images} />
         )
         return images
     }
@@ -61,3 +66,15 @@ export default function Product() {
         </div>
     )
 }
+
+// const Product = ({prod, key}) => {
+//     console.log(this.prod);
+//     return(
+//         <div>
+//             <h1>{prod}</h1>
+//             <h1>{key}</h1>
+//         </div>
+//     )
+// } 
+
+// export default Product
