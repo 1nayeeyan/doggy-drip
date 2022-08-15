@@ -1,48 +1,36 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
-// import products from "../data/products";
+import { CartState } from "../context/Context";
 
 export default function Product() {
-    const [chosenPhoto, setChosenPhoto] = React.useState(false)
-    const [chosenColor, setChosenColor] = React.useState(false)
-    
+
     const {state} = useLocation();
     const {prod, key} = state;
 
     console.log(prod);
+    
+    const [chosenPhoto, setChosenPhoto] = React.useState(false)
+    const [chosenColor, setChosenColor] = React.useState(false)
 
-    // let productid = useParams()
-    // console.log(productid.productid)
-
-    // const objectArray = Object.values(products);
-    // // console.log(objectArray)
-
-    // const product = objectArray.find(element => element.id === productid.productid);
-    // // console.log(product)
+    const {state: {cart}, dispatch,} = CartState();
+    console.log(cart);
 
     const gallery = Object.values(prod.gallery);
-    console.log(gallery)
 
-    function changeStyle(images) {
-        setChosenPhoto(images)
-        setChosenColor(images.slice(25, images.indexOf('.')))
+    function changeStyle(image) {
+        setChosenPhoto(image)
+        setChosenColor(image.slice(25, image.indexOf('.')))
+        prod.previewImage = image;
+        prod.previewImageColor = image.slice(25, image.indexOf("."));
     }
 
     function galleryMaker(){
-        const images = gallery.map(
-            images => <img onClick={() => changeStyle(images)} key={images} className="gallery-images"src = {images} />
+        
+        const image = gallery.map(
+            image => <img onClick={() => changeStyle(image)} key={image} className="gallery-images"src = {image} />
         )
-        return images
+        return image
     }
-
-    // function chosenPhoto(photoUrl){
-    //     console.log(photoUrl)
-    //     let chosenPhoto = photoUrl
-    //     let chosenPhotoColor = photoUrl.slice(14, photoUrl.indexOf('.'))
-    //     console.log(chosenPhotoColor)
-
-    //     return chosenPhoto, chosenPhotoColor
-    // }
 
     return (
         <div className="product-page container mt-5">
@@ -57,24 +45,26 @@ export default function Product() {
                     <p>{prod.category}</p>
                     <h5>Color: {chosenColor || prod.previewImageColor}</h5>
                     {galleryMaker()}
-                    <button type="button" className="btn btn-success add-to-cart mt-5" onClick={() => {
-                        }
-                        }>Add to cart
-                    </button>
+                    {
+                        cart.some((p) => p.id === key) ? (
+                            <button type="button" className="btn btn-danger remove-from-cart mt-5" onClick={() =>{
+                                dispatch({
+                                    type:'RemoveFromCart',
+                                    payload: prod,
+                                });
+                            }}> Remove From cart
+                            </button>
+                        ):(
+                            <button type="button" className="btn btn-success add-to-cart mt-5" onClick={() => {
+                                dispatch({
+                                    type:'AddToCart',
+                                    payload: prod,
+                                });
+                            }}>Add to cart
+                            </button>)
+                    }
                 </div>
             </div>
         </div>
     )
 }
-
-// const Product = ({prod, key}) => {
-//     console.log(this.prod);
-//     return(
-//         <div>
-//             <h1>{prod}</h1>
-//             <h1>{key}</h1>
-//         </div>
-//     )
-// } 
-
-// export default Product

@@ -135,3 +135,15 @@ nav{
 .add-to-cart {
   width: inherit;
 }
+
+.remove-from-cart {
+  width: inherit;
+}
+
+.cart-filled{
+  color: green;
+}
+
+.cart-empty{
+  color:black;
+}

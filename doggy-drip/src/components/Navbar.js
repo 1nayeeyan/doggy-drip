@@ -7,9 +7,13 @@ import { mdiAccountOutline } from '@mdi/js';
 import BrandLogo from '../images/brand/brand.png'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { CartState } from "../context/Context";
 
 export default function Navbar() {
     let navigate = useNavigate();
+
+    const {state: {cart}, } = CartState();
+
     return (
         <nav>
             <div id="logo">
@@ -29,7 +33,11 @@ export default function Navbar() {
                 color="black" />
                 <Icon path={mdiCartOutline}
                 size={1.25}
-                color="black" />
+                className={cart.length > 0 ? "cart-filled" : "cart-empty"}
+                onClick = {() =>
+                    navigate("./cart")
+                }
+                />
                 <Icon path={mdiAccountOutline}
                 size={1.25}
                 color="black" />
