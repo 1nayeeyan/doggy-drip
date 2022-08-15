@@ -147,3 +147,16 @@ nav{
 .cart-empty{
   color:black;
 }
+
+.cart-page{
+  display: grid;
+  grid-template-areas: 'products products products products summary';
+}
+
+.product-container{
+  grid-area: products;
+}
+
+.summary {
+  grid-area: summary;
+}
