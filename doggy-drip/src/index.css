@@ -159,4 +159,13 @@ nav{
 
 .summary {
   grid-area: summary;
+  text-align:right;
+}
+
+.product-in-cart{
+  width: 5rem;
+}
+
+.checkout-btn{
+  width: inherit;
 }

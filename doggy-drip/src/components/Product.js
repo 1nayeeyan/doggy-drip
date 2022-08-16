@@ -7,13 +7,13 @@ export default function Product() {
     const {state} = useLocation();
     const {prod, key} = state;
 
-    console.log(prod);
+    // console.log(prod);
     
     const [chosenPhoto, setChosenPhoto] = React.useState(false)
     const [chosenColor, setChosenColor] = React.useState(false)
 
     const {state: {cart}, dispatch,} = CartState();
-    console.log(cart);
+    // console.log(cart);
 
     const gallery = Object.values(prod.gallery);
 
