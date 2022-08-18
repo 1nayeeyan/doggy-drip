@@ -6,7 +6,6 @@ import { mdiCartOutline } from '@mdi/js';
 import { mdiAccountOutline } from '@mdi/js'; 
 import BrandLogo from '../images/brand/brand.png'
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { CartState } from "../context/Context";
 
 export default function Navbar() {

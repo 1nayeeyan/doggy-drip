@@ -1,7 +1,5 @@
 import React from "react";
-import Shop from "./Shop";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import DogWalking from "../images/brand/dog-walking.svg"
 
 export default function Home() {

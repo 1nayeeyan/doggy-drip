@@ -6,7 +6,7 @@ import { cartReducer } from "./Reducers";
 const Cart = createContext();
 
 const Context = ( {children} ) => {
-
+    //intialize how data will be stored
     const product = products.map((p) => ({
         category: p.category,
         id: p.id,
@@ -17,8 +17,7 @@ const Context = ( {children} ) => {
         gallery: p.gallery,
     }));
         
-    // console.log(products);
-
+    //call functions to change state of cart
     const [state, dispatch] = useReducer(cartReducer, {
         products: product,
         cart:[]

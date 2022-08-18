@@ -1,4 +1,6 @@
 export const cartReducer = (state, action) => {
+
+    //functions to change state of cart with desired action
     switch (action.type) {
         case "AddToCart":
             return{...state, cart:[...state.cart, {...action.payload, qty:1}] };

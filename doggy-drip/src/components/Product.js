@@ -4,19 +4,22 @@ import { CartState } from "../context/Context";
 
 export default function Product() {
 
+    //grab state of product from shop's navigation
     const {state} = useLocation();
+    //extract individual items from state
     const {prod, key} = state;
-
-    // console.log(prod);
     
+    //internal state to manage changes to desired product variant
     const [chosenPhoto, setChosenPhoto] = React.useState(false)
     const [chosenColor, setChosenColor] = React.useState(false)
 
+    //call to change the state of cart
     const {state: {cart}, dispatch,} = CartState();
-    // console.log(cart);
 
+    //collect images of variants
     const gallery = Object.values(prod.gallery);
-
+    
+    //changes state of variant selected
     function changeStyle(image) {
         setChosenPhoto(image)
         setChosenColor(image.slice(25, image.indexOf('.')))
@@ -24,8 +27,8 @@ export default function Product() {
         prod.previewImageColor = image.slice(25, image.indexOf("."));
     }
 
+    //creates the grid-view of the variants
     function galleryMaker(){
-        
         const image = gallery.map(
             image => <img onClick={() => changeStyle(image)} key={image} className="gallery-images"src = {image} />
         )

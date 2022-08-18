@@ -5,6 +5,7 @@ import { CartState } from "../context/Context";
 export default function Shop(){
     let navigate = useNavigate();
 
+    //navigate to product's page and send state
     function viewProduct(product) {
         navigate(`/product/${product.id}`, {
             state: {
@@ -12,13 +13,13 @@ export default function Shop(){
                 key: product.id,
             }
         });
-        // return <Product prod={product} key ={product.id} />
     }
 
     const {
         state: {products},
     } = CartState();
 
+    //creates the grid view of products
     const product = products.map((product) =>
         <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product) }>
             <img src={product.previewImage} alt={product.name} />
@@ -39,13 +40,3 @@ export default function Shop(){
         </div>
     )
 }
-
-// const Shop = () => {
-//     return (
-//         <div>
-//             <h1>"poop" </h1>
-//         </div>
-//     )
-// }
-
-// export default Shop

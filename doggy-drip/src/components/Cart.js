@@ -7,6 +7,7 @@ export default function Cart() {
 
     const [total, setTotal] = useState();
 
+    //Calculates total cost of cart
     useEffect(() => {
         setTotal(cart.reduce((acc, curr) => acc + Number(curr.price)*(curr.qty), 0));
     }, [cart]);
@@ -30,9 +31,9 @@ export default function Cart() {
                                 <Col md={3}>
                                 <span style={{textalign: 'center'}}>Variant: {prod.previewImageColor}</span>
                                 </Col>
-                                <Col md={2}>
-                                    <Form.Control 
-                                    as="select" 
+                                <Col md={2}> 
+                                    <Form.Control  //drop down menu to change quantity 
+                                    as="select"  
                                     value={prod.qty}
                                     onChange={(e) => 
                                     dispatch({
@@ -59,7 +60,7 @@ export default function Cart() {
                 <h3>Subtotal {cart.length} items </h3>
                 <ListGroup>
                     {cart.map(prod => (
-                        <ListGroupItem className="total-calc mt-2 border-0">
+                        <ListGroupItem className="total-calc mt-1 border-0">
                             <Row>
                                 <span>${prod.price} x {prod.qty} = ${prod.price * prod.qty}</span>
                             </Row>
