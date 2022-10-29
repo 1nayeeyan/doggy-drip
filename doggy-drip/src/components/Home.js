@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import DogWalking from "../images/brand/dog-walking.svg"
+import { motion } from "framer-motion";
 
 export default function Home() {
     let navigate = useNavigate();
@@ -12,11 +13,15 @@ export default function Home() {
             <h2 id="intro-text">
               Dogs leave paw prints on our hearts, so treat them right while they're here.
             </h2>
-            <button type="button" className="btn btn-warning shop-now" onClick={() => {
+            <motion.button type="button" 
+            className="btn btn-warning shop-now"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
+            onClick={() => {
               navigate("/shop")
              }
             }>Shop Now
-            </button>
+            </motion.button>
         </div>
         </div>
       </div>

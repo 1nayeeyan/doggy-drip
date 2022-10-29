@@ -16,7 +16,9 @@ export default function Navbar() {
     return (
         <nav>
             <div id="logo">
-                <img src={BrandLogo} alt="Brand Logo" id="brand-logo" />
+                <img src={BrandLogo} alt="Brand Logo" id="brand-logo" onClick={() => {
+                    navigate("./home")
+                }}/>
             </div>
 
             <h3 id="shop-title" onClick={() => {

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate} from "react-router-dom";
 import { CartState } from "../context/Context";
+import { motion } from "framer-motion";
 
 export default function Shop(){
     let navigate = useNavigate();
@@ -21,13 +22,20 @@ export default function Shop(){
 
     //creates the grid view of products
     const product = products.map((product) =>
-        <div key={product.id} className="product col-sm mb-5" onClick={() => viewProduct(product) }>
-            <img src={product.previewImage} alt={product.name} />
+        <motion.div key={product.id} 
+        className="product col-sm mb-5" 
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}
+        onClick={() => viewProduct(product) }>
+            <img 
+            src={product.previewImage} 
+            alt={product.name} 
+            />
             <div className="product-text">
                 <h3>{product.name}</h3>
                 <h4>${product.price}</h4>
             </div>
-        </div>
+        </motion.div>
         )
 
     return(
