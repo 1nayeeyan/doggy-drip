@@ -7,6 +7,7 @@ import { mdiAccountOutline } from '@mdi/js';
 import BrandLogo from '../images/brand/brand.png'
 import { useNavigate } from "react-router-dom";
 import { CartState } from "../context/Context";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
     let navigate = useNavigate();
@@ -15,15 +16,26 @@ export default function Navbar() {
 
     return (
         <nav>
-            <div id="logo">
-                <img src={BrandLogo} alt="Brand Logo" id="brand-logo" onClick={() => {
+            <motion.div 
+                id="logo"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
+                >    
+                <img src={BrandLogo} 
+                alt="Brand Logo" 
+                id="brand-logo"
+                onClick={() => {
                     navigate("./home")
                 }}/>
-            </div>
+            </motion.div>
 
-            <h3 id="shop-title" onClick={() => {
+            <motion.h3
+                id="shop-title" 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
+                onClick={() => {
                 navigate("./shop")
-            }}> Shop </h3>
+            }}> Shop </motion.h3>
             
             <div id="nav-icons">
                 <Icon path={mdiMagnify}
@@ -35,6 +47,8 @@ export default function Navbar() {
                 <Icon path={mdiCartOutline}
                 size={1.25}
                 className={cart.length > 0 ? "cart-filled" : "cart-empty"}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
                 onClick = {() =>
                     navigate("./cart")
                 }
