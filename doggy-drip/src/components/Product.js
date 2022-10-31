@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { CartState } from "../context/Context";
+import { motion } from "framer-motion";
 
 export default function Product() {
 
@@ -30,7 +31,10 @@ export default function Product() {
     //creates the grid-view of the variants
     function galleryMaker(){
         const image = gallery.map(
-            image => <img onClick={() => changeStyle(image)} key={image} className="gallery-images"src = {image} />
+            image => <motion.img onClick={() => changeStyle(image)} key={image} 
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
+                        className="gallery-images"src = {image} />
         )
         return image
     }

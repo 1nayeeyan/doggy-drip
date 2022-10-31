@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import DogWalking from "../images/brand/dog-walking.svg"
-import Wave from "../images/brand/wave.svg"
 import { motion } from "framer-motion";
 
 export default function Home() {

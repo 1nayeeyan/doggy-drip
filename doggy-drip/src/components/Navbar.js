@@ -47,8 +47,6 @@ export default function Navbar() {
                 <Icon path={mdiCartOutline}
                 size={1.25}
                 className={cart.length > 0 ? "cart-filled" : "cart-empty"}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} 
                 onClick = {() =>
                     navigate("./cart")
                 }

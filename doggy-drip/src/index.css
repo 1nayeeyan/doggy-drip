@@ -170,3 +170,26 @@ nav{
 .checkout-btn{
   width: inherit;
 }
+
+footer{
+  overflow: hidden;
+  position: relative;
+  height: 1000px;
+}
+
+.footer-container{
+  position: absolute;
+}
+
+#footer-wave{
+  margin-top: 10%;
+}
+
+#footer-wave-fill{
+  margin: -1px;
+  width: 100%;
+}
+
+a { 
+  color: inherit; 
+} 
