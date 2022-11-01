@@ -41,7 +41,7 @@ export default function Shop(){
     return(
         <div className="products-grid container">
             <h2 className="category-header mt-5 mb-2">All Products</h2>
-            <h3 className="category-header mt-2 mb-5">{products.length} Items</h3>
+            <h3 className="category-header mt-2 mb-5 px-4">{products.length} Items</h3>
             <div className="product-bin container-md row gx-2">
             {product}
             </div>

@@ -26,13 +26,13 @@ export default function Footer() {
                             <h5 class="headin5_amrc col_white_amrc pt2">About us</h5>
                             <p class="mb-10">Doggy Drip is a fake E-Commerce site created by Yanik Nayee, a computer science student specializing in Front-End Development. The site claims to sell dog products but it does absolutely nothing, if anything you can find the actual products on AliExpress.com. Just be aware, it'll probably take a month or two for the products to come in. Honestly, just spend an extra few bucks and go to Pet Value or buy it from Amazon.</p>
                             <p><Icon path={mdiMapMarker}
-                                size={1.1}
+                                size={0.5}
                             /> 8840 Real Address, Toronto Ontario. </p>
                             <p><Icon path={mdiPhone}
-                                size={1.1}
+                                size={0.5}
                             /> +1-6475558569  </p>
                             <p><Icon path={mdiEmail}
-                                size={1.1}
+                                size={0.5}
                             /> doggydrip-support@gmail.com  </p>
                         </div>
                         </div>

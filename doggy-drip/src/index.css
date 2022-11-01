@@ -108,6 +108,12 @@ nav{
     justify-content: flex-end;
   }
 
+  footer{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
 }
 
 
@@ -240,6 +246,7 @@ footer{
 
 .footer-container{
   position: absolute;
+  height: 100%;
 }
 
 #footer-wave{
@@ -256,5 +263,5 @@ a {
 } 
 
 .about-us {
-  max-width: 90%;
+  width: 90%;
 }
