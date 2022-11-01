@@ -25,7 +25,7 @@ export default function Navbar() {
                 alt="Brand Logo" 
                 id="brand-logo"
                 onClick={() => {
-                    navigate("./home")
+                    navigate("./doggy-drip")
                 }}/>
             </motion.div>
 
@@ -40,18 +40,21 @@ export default function Navbar() {
             <div id="nav-icons">
                 <Icon path={mdiMagnify}
                 size={1.25}
+                className="mobile-hidden"
                 color="black" />
                 <Icon path={mdiHeartOutline}
+                className="mobile-hidden"
                 size={1.25}
                 color="black" />
                 <Icon path={mdiCartOutline}
                 size={1.25}
-                className={cart.length > 0 ? "cart-filled" : "cart-empty"}
+                className={cart.length > 0 ? "cart cart-filled" : "cart cart-empty"}
                 onClick = {() =>
                     navigate("./cart")
                 }
                 />
                 <Icon path={mdiAccountOutline}
+                className="mobile-hidden"
                 size={1.25}
                 color="black" />
             </div>
