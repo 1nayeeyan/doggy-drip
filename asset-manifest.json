@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/doggy-drip/static/css/main.7a506b38.css",
-    "main.js": "/doggy-drip/static/js/main.ca38082d.js",
+    "main.css": "/doggy-drip/static/css/main.a041ead8.css",
+    "main.js": "/doggy-drip/static/js/main.7a5cdf84.js",
     "static/media/Purple.png": "/doggy-drip/static/media/Purple.fbb010cd7124576f472b.png",
     "static/media/Orange.png": "/doggy-drip/static/media/Orange.8ccba181e3d12f0fef9f.png",
     "static/media/Green.png": "/doggy-drip/static/media/Green.bedeecb2142681e40a19.png",
@@ -17,11 +17,13 @@
     "static/media/brand.png": "/doggy-drip/static/media/brand.be73468724f93b20c85e.png",
     "static/media/dog-walking.svg": "/doggy-drip/static/media/dog-walking.a2e719be68d37bcb619a72ed10f8ecff.svg",
     "index.html": "/doggy-drip/index.html",
-    "main.7a506b38.css.map": "/doggy-drip/static/css/main.7a506b38.css.map",
-    "main.ca38082d.js.map": "/doggy-drip/static/js/main.ca38082d.js.map"
+    "static/media/wave-haikei.svg": "/doggy-drip/static/media/wave-haikei.9bdd02f610de339ce5b12fc854fc3fb6.svg",
+    "static/media/wave.svg": "/doggy-drip/static/media/wave.2565b5f6982ed8066b8827f02622d8cf.svg",
+    "main.a041ead8.css.map": "/doggy-drip/static/css/main.a041ead8.css.map",
+    "main.7a5cdf84.js.map": "/doggy-drip/static/js/main.7a5cdf84.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a506b38.css",
-    "static/js/main.ca38082d.js"
+    "static/css/main.a041ead8.css",
+    "static/js/main.7a5cdf84.js"
   ]
 }
