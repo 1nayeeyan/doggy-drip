@@ -37,17 +37,17 @@ export default function Footer() {
                         </div>
                         </div>
                         <div className="row">
-                        <div class="social mt-5 d-flex justify-content-center"><motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}className="p-1" href="#"><Icon path={mdiInstagram} size={1.6}/> </motion.a><motion.a whileHover={{ scale: 1.1 }}whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiSnapchat} size={1.6}/></motion.a><motion.a whileHover={{ scale: 1.1 }}whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiTwitter} size={1.6}/></motion.a><motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiFacebook} size={1.6}/></motion.a></div>
-                            <ul class="mt-3 list-inline d-flex justify-content-center">
-                                <li class="list-inline-item"><a href="#" onClick={() => {
+                        <div className="social mt-5 d-flex justify-content-center"><motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9, x: "-5px", y: "5px" }}className="p-1" href="#"><Icon path={mdiInstagram} size={1.6}/> </motion.a><motion.a whileHover={{ scale: 1.1 }}whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiSnapchat} size={1.6}/></motion.a><motion.a whileHover={{ scale: 1.1 }}whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiTwitter} size={1.6}/></motion.a><motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9, x: "-5px", y: "5px" }} className="p-1" href="#"><Icon path={mdiFacebook} size={1.6}/></motion.a></div>
+                            <ul className="footer-links mt-3 list-inline d-flex justify-content-center">
+                                <li className="list-inline-item"><a href="#" onClick={() => {
                                     navigate("./doggy-drip")
                                 }}>Home</a></li>
-                                <li class="list-inline-item"><a href="#">About Us</a></li>
-                                <li class="list-inline-item"><a href="#">Newsletter</a></li>
-                                <li class="list-inline-item"><a href="#">Terms</a></li>
-                                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                                <li className="list-inline-item"><a href="#">About Us</a></li>
+                                <li className="list-inline-item"><a href="#">Newsletter</a></li>
+                                <li className="list-inline-item"><a href="#">Terms</a></li>
+                                <li className="list-inline-item"><a href="#">Privacy Policy</a></li>
                             </ul>
-                            <p class="copyright mt-3 d-flex justify-content-center">DoggyDrip © 2022</p>
+                            <p className="copyright mt-3 d-flex justify-content-center">DoggyDrip © 2022</p>
                         </div>
                         </div>
                         </div>
